@@ -15,23 +15,23 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span>SkillCraft <span class="logo-accent">Technology</span></span>
+                <h1>SkillCraft <span class="logo-accent">Tech</span></h1>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <button class="nav-link" onclick="scrollToSection('home')">Home</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <button class="nav-link" onclick="scrollToSection('about')">About</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#features" class="nav-link">Features</a>
+                    <button class="nav-link" onclick="scrollToSection('features')">Features</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#courses" class="nav-link">Courses</a>
+                    <button class="nav-link" onclick="scrollToSection('courses')">Courses</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="nav-link" onclick="scrollToSection('contact')">Contact</button>
                 </li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -44,17 +44,56 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="floating-element floating-1"></div>
+            <div class="floating-element floating-2"></div>
+            <div class="floating-element floating-3"></div>
+            <div class="floating-element floating-4"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Building Skills for the <span class="text-gradient">Future</span></h1>
-                <p class="hero-subtitle">Empowering the next generation with cutting-edge technology education and innovative learning solutions</p>
+                <h1 class="hero-title">
+                    <span class="hero-main">SkillCraft</span>
+                    <span class="hero-sub">Technology</span>
+                </h1>
+                <p class="hero-subtitle">Building Skills for the Future - Empowering the next generation with cutting-edge technology education and innovative learning solutions</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary">Get Started</button>
-                    <button class="btn btn-outline">Learn More</button>
+                    <button class="btn btn-primary" onclick="scrollToSection('courses')">
+                        Start Learning
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-outline" onclick="scrollToSection('about')">
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5,3 19,12 5,21"/>
+                        </svg>
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Courses</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-graphic"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
             </div>
         </div>
     </section>
@@ -63,30 +102,70 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About SkillCraft Technology</h2>
-                <p class="section-subtitle">Shaping the future through innovative education</p>
+                <h2 class="section-title">About <span class="text-sky">SkillCraft Technology</span></h2>
+                <p class="section-subtitle">We are revolutionizing technology education by providing innovative, practical, and accessible learning experiences that prepare the next generation for tomorrow's digital challenges.</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
                     <h3>Our Mission</h3>
-                    <p>At SkillCraft Technology, we believe in empowering individuals with the skills they need to succeed in the digital age. Our comprehensive programs are designed to bridge the gap between traditional education and industry requirements.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h4>10,000+</h4>
-                            <p>Students Trained</p>
+                    <p>To democratize technology education and make quality learning accessible to everyone, everywhere.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">👥</div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals with years of real-world experience in cutting-edge technologies.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🏆</div>
+                    <h3>Certified Learning</h3>
+                    <p>Earn industry-recognized certificates that boost your career prospects and validate your skills.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">⚡</div>
+                    <h3>Hands-on Projects</h3>
+                    <p>Build real-world projects that showcase your abilities and create an impressive portfolio.</p>
+                </div>
+            </div>
+            <div class="about-main">
+                <div class="about-content">
+                    <h3>Empowering the Next Generation</h3>
+                    <p>At SkillCraft Technology, we believe that technology education should be engaging, practical, and future-focused. Our comprehensive curriculum is designed by industry experts to ensure students learn the most in-demand skills.</p>
+                    <p>From web development and mobile app creation to artificial intelligence and data science, we provide the tools and knowledge needed to thrive in the digital economy.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-dot"></div>
+                            <span>Industry-aligned curriculum</span>
                         </div>
-                        <div class="stat">
-                            <h4>95%</h4>
-                            <p>Job Placement Rate</p>
+                        <div class="feature-item">
+                            <div class="feature-dot"></div>
+                            <span>Personalized learning paths</span>
                         </div>
-                        <div class="stat">
-                            <h4>50+</h4>
-                            <p>Industry Partners</p>
+                        <div class="feature-item">
+                            <div class="feature-dot"></div>
+                            <span>Real-world project experience</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="about-graphic"></div>
+                <div class="about-stats">
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-num">5+</div>
+                            <div class="stat-text">Years Experience</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">100+</div>
+                            <div class="stat-text">Companies Hiring</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">95%</div>
+                            <div class="stat-text">Job Placement</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">4.9</div>
+                            <div class="stat-text">Student Rating</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,40 +175,106 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose SkillCraft?</h2>
-                <p class="section-subtitle">Discover what makes us different</p>
+                <h2 class="section-title">Our <span class="text-sky">Learning Features</span></h2>
+                <p class="section-subtitle">Discover the technologies and skills that will shape your future career in the digital world.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Industry-Focused Curriculum</h3>
-                    <p>Our courses are designed with input from industry experts to ensure relevance and practical application.</p>
+                    <div class="feature-top-bar blue-cyan"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-box blue-cyan">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Master modern web technologies including React, Node.js, and full-stack development.</p>
+                        <button class="feature-btn">Learn More →</button>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Expert Instructors</h3>
-                    <p>Learn from experienced professionals who bring real-world insights to the classroom.</p>
+                    <div class="feature-top-bar purple-pink"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-box purple-pink">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                                <line x1="7" y1="2" x2="7" y2="22"/>
+                                <line x1="17" y1="2" x2="17" y2="22"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <line x1="2" y1="7" x2="7" y2="7"/>
+                                <line x1="2" y1="17" x2="7" y2="17"/>
+                                <line x1="17" y1="17" x2="22" y2="17"/>
+                                <line x1="17" y1="7" x2="22" y2="7"/>
+                            </svg>
+                        </div>
+                        <h3>Mobile Development</h3>
+                        <p>Build native and cross-platform mobile applications for iOS and Android.</p>
+                        <button class="feature-btn">Learn More →</button>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>Hands-on Learning</h3>
-                    <p>Practice with real projects and build a portfolio that showcases your skills to employers.</p>
+                    <div class="feature-top-bar green-emerald"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-box green-emerald">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+                                <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Explore machine learning, deep learning, and AI application development.</p>
+                        <button class="feature-btn">Learn More →</button>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Career Support</h3>
-                    <p>Get job placement assistance, resume reviews, and interview preparation to launch your career.</p>
+                    <div class="feature-top-bar orange-red"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-box orange-red">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+                                <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+                            </svg>
+                        </div>
+                        <h3>Data Science</h3>
+                        <p>Analyze data, create insights, and build predictive models for business solutions.</p>
+                        <button class="feature-btn">Learn More →</button>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Flexible Learning</h3>
-                    <p>Study at your own pace with online, offline, and hybrid learning options available.</p>
+                    <div class="feature-top-bar indigo-blue"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-box indigo-blue">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Cloud Computing</h3>
+                        <p>Learn AWS, Azure, and cloud architecture for scalable application deployment.</p>
+                        <button class="feature-btn">Learn More →</button>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Certification</h3>
-                    <p>Earn industry-recognized certificates that validate your skills and boost your career prospects.</p>
+                    <div class="feature-top-bar teal-cyan"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon-box teal-cyan">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polyline points="16,18 22,12 16,6"/>
+                                <polyline points="8,6 2,12 8,18"/>
+                            </svg>
+                        </div>
+                        <h3>Programming Foundations</h3>
+                        <p>Build strong coding fundamentals with Python, JavaScript, and software engineering.</p>
+                        <button class="feature-btn">Learn More →</button>
+                    </div>
                 </div>
+            </div>
+            <div class="features-cta">
+                <h3>Ready to Start Your Journey?</h3>
+                <p>Join thousands of students who have transformed their careers with our comprehensive technology education programs.</p>
+                <button class="btn btn-white">Explore All Courses</button>
             </div>
         </div>
     </section>
@@ -138,52 +283,260 @@
     <section id="courses" class="courses">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Popular Courses</h2>
-                <p class="section-subtitle">Choose from our wide range of technology courses</p>
+                <h2 class="section-title">Popular <span class="text-sky">Courses</span></h2>
+                <p class="section-subtitle">Choose from our comprehensive range of technology courses designed to advance your career and skills.</p>
             </div>
             <div class="courses-grid">
                 <div class="course-card">
                     <div class="course-image">
-                        <div class="course-graphic web-dev"></div>
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Full-Stack Web Development">
+                        <div class="course-level">Beginner to Advanced</div>
+                        <div class="course-price">$299</div>
                     </div>
                     <div class="course-content">
-                        <h3>Full Stack Web Development</h3>
-                        <p>Master modern web technologies including HTML, CSS, JavaScript, React, Node.js, and databases.</p>
-                        <div class="course-info">
-                            <span class="duration">6 months</span>
-                            <span class="level">Beginner to Advanced</span>
+                        <h3>Full-Stack Web Development</h3>
+                        <p>Master both frontend and backend development with React, Node.js, and MongoDB.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                12 weeks
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                2,543
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" fill="#fbbf24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                4.9
+                            </div>
                         </div>
-                        <button class="btn btn-primary">Enroll Now</button>
+                        <button class="btn btn-primary course-btn">
+                            Enroll Now
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
+                <!-- Repeat similar structure for other courses -->
                 <div class="course-card">
                     <div class="course-image">
-                        <div class="course-graphic data-science"></div>
-                    </div>
-                    <div class="course-content">
-                        <h3>Data Science & Analytics</h3>
-                        <p>Learn Python, machine learning, data visualization, and statistical analysis for data-driven insights.</p>
-                        <div class="course-info">
-                            <span class="duration">8 months</span>
-                            <span class="level">Intermediate</span>
-                        </div>
-                        <button class="btn btn-primary">Enroll Now</button>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <div class="course-image">
-                        <div class="course-graphic mobile-dev"></div>
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mobile App Development">
+                        <div class="course-level">Intermediate</div>
+                        <div class="course-price">$349</div>
                     </div>
                     <div class="course-content">
                         <h3>Mobile App Development</h3>
-                        <p>Build native and cross-platform mobile applications using React Native, Flutter, and native SDKs.</p>
-                        <div class="course-info">
-                            <span class="duration">5 months</span>
-                            <span class="level">Intermediate</span>
+                        <p>Build native iOS and Android apps using React Native and Flutter.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                10 weeks
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                1,876
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" fill="#fbbf24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                4.8
+                            </div>
                         </div>
-                        <button class="btn btn-primary">Enroll Now</button>
+                        <button class="btn btn-primary course-btn">
+                            Enroll Now
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Data Science & AI">
+                        <div class="course-level">Beginner to Advanced</div>
+                        <div class="course-price">$399</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Data Science & AI</h3>
+                        <p>Learn Python, machine learning, and artificial intelligence fundamentals.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                16 weeks
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                1,234
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" fill="#fbbf24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                4.9
+                            </div>
+                        </div>
+                        <button class="btn btn-primary course-btn">
+                            Enroll Now
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cloud Computing & DevOps">
+                        <div class="course-level">Intermediate to Advanced</div>
+                        <div class="course-price">$279</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Cloud Computing & DevOps</h3>
+                        <p>Master AWS, Docker, Kubernetes, and modern deployment strategies.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                8 weeks
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                987
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" fill="#fbbf24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                4.7
+                            </div>
+                        </div>
+                        <button class="btn btn-primary course-btn">
+                            Enroll Now
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cybersecurity Fundamentals">
+                        <div class="course-level">Beginner to Intermediate</div>
+                        <div class="course-price">$329</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Cybersecurity Fundamentals</h3>
+                        <p>Protect digital assets and learn ethical hacking techniques.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                14 weeks
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                756
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" fill="#fbbf24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                4.8
+                            </div>
+                        </div>
+                        <button class="btn btn-primary course-btn">
+                            Enroll Now
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="UI/UX Design Mastery">
+                        <div class="course-level">Beginner</div>
+                        <div class="course-price">$199</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>UI/UX Design Mastery</h3>
+                        <p>Create beautiful and user-friendly digital experiences.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                6 weeks
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                1,543
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" fill="#fbbf24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                4.9
+                            </div>
+                        </div>
+                        <button class="btn btn-primary course-btn">
+                            Enroll Now
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-cta">
+                <button class="btn btn-outline-sky">View All Courses</button>
             </div>
         </div>
     </section>
@@ -193,22 +546,23 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Ready to start your learning journey?</p>
+                <p class="section-subtitle">Ready to start your learning journey? Contact us today!</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <div class="contact-item">
-                        <span class="contact-icon">📧</span>
+                        <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
                         <span>info@skillcrafttech.com</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">📞</span>
+                        <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
                         <span>+1 (555) 123-4567</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <span>123 Tech Street, Innovation City, IC 12345</span>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -223,12 +577,15 @@
                             <select id="course" name="course">
                                 <option value="">Select a Course</option>
                                 <option value="web-dev">Full Stack Web Development</option>
-                                <option value="data-science">Data Science & Analytics</option>
                                 <option value="mobile-dev">Mobile App Development</option>
+                                <option value="data-science">Data Science & AI</option>
+                                <option value="cloud-devops">Cloud Computing & DevOps</option>
+                                <option value="cybersecurity">Cybersecurity Fundamentals</option>
+                                <option value="ui-ux">UI/UX Design Mastery</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -245,29 +602,56 @@
                     <h3>SkillCraft <span class="logo-accent">Technology</span></h3>
                     <p>Empowering the next generation with cutting-edge technology education. Building skills for the future, one student at a time.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link">📘</a>
-                        <a href="#" class="social-link">🐦</a>
-                        <a href="#" class="social-link">💼</a>
-                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><button onclick="scrollToSection('home')">Home</button></li>
+                        <li><button onclick="scrollToSection('about')">About</button></li>
+                        <li><button onclick="scrollToSection('features')">Features</button></li>
+                        <li><button onclick="scrollToSection('courses')">Courses</button></li>
+                        <li><button onclick="scrollToSection('contact')">Contact</button></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <div class="contact-item">
-                        <span>📧 info@skillcrafttech.com</span>
+                        <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span>info@skillcrafttech.com</span>
                     </div>
                     <div class="contact-item">
-                        <span>📞 +1 (555) 123-4567</span>
+                        <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>+1 (555) 123-4567</span>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -275,7 +659,12 @@
                     <p>Stay updated with our latest courses</p>
                     <div class="newsletter">
                         <input type="email" placeholder="Your email">
-                        <button>📧</button>
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
